@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { u, wallet } from '@cityofzion/neon-js'
+import { u, wallet } from "@cityofzion/neon-js";
 export default {
   name: "HelloWorld",
   props: {
@@ -46,7 +46,7 @@ export default {
         this.output += `Private Key: ${acct.privateKey}\n`;
         this.output += `WIF: ${acct.WIF}\n`;
       } catch (err) {
-        return
+        return;
       }
     },
     reverseHex: function() {
@@ -78,7 +78,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #output {
-  white-space: pre-line
+  white-space: pre-line;
 }
 
 h3 {
