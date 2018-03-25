@@ -36,7 +36,7 @@
     "root": true,
     "extends": [
       "plugin:vue/essential",
-      "@vue/eslint-config-prettier"
+      "@vue/prettier"
     ]
   },
   "postcss": {
