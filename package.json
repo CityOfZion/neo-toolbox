@@ -10,7 +10,7 @@
     "gh-pages": "node gh-pages.js"
   },
   "dependencies": {
-    "@cityofzion/neon-js": "^3.4.5",
+    "@cityofzion/neon-js": "^3.5.0",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.13"
   },
