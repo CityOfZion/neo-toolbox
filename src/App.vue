@@ -11,7 +11,8 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
-html, body {
+html,
+body {
   font-size: 62.5%;
   background-color: #f8f8f8;
   padding: 0;
