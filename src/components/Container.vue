@@ -4,6 +4,7 @@ console.log("hiya");
 
 <style lang="scss" scoped>
 .container {
+  animation: right-pull .75s ease forwards;
   background-color: #ffffff;
   border: none;
   border-radius: 4%;
@@ -14,6 +15,7 @@ console.log("hiya");
   min-width: 290px;
   width: 30vw;
   max-width: 700px;
+  opacity: 0;
   overflow: hidden;
 
   .containerTop, .containerBot {
@@ -43,6 +45,17 @@ console.log("hiya");
       color: #8bc34a;
     }
   }
+}
+
+@keyframes right-pull {
+	0% {
+		opacity: 0;
+		margin-right: -3em;
+	}
+	100% {
+		opacity: 1;
+		margin-right: 0;
+	}
 }
 </style>
 
