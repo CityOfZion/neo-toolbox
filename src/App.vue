@@ -18,6 +18,10 @@ body {
   margin: 0;
 }
 
+div {
+  box-sizing: border-box;
+}
+
 #app {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
