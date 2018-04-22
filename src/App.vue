@@ -16,6 +16,11 @@ body {
   font-size: 62.5%;
   padding: 0;
   margin: 0;
+  background: linear-gradient(
+    to bottom right,
+    transparent,
+    rgba(190, 190, 190, 0.05)
+  );
 }
 
 div {

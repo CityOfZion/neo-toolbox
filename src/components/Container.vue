@@ -38,46 +38,103 @@ export default {
       width: 100%;
 
       h2 {
-        display: inline;
+        margin: 0;
+        line-height: 3rem;
         font-size: 3rem;
         font-weight: lighter;
-        margin: 0;
+        display: inline;
         padding-left: 8px;
+      }
+
+      .type {
+        box-sizing: border-box;
+        border: none;
+        border-radius: 1px;
+        float: right;
+
+        height: 3rem;
+        font-size: 2rem;
+
+        &:focus {
+          outline: 0;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
       }
     }
 
     @media (min-width: 1201px) {
-      .containerTop h2,
-      .containerBot h2 {
-        font-size: 3.5rem;
+      .containerTop,
+      .containerBot {
+        h2 {
+          line-height: 3.5rem;
+          font-size: 3.5rem;
+        }
+
+        .type {
+          height: 3.5rem;
+          font-size: 2.3rem;
+        }
       }
     }
 
     @media (min-width: 1400px) {
-      .containerTop h2,
-      .containerBot h2 {
-        font-size: 4rem;
+      .containerTop,
+      .containerBot {
+        h2 {
+          line-height: 4rem;
+          font-size: 4rem;
+        }
+
+        .type {
+          height: 4rem;
+          font-size: 2.6rem;
+        }
       }
     }
 
     @media (min-width: 1800px) {
-      .containerTop h2,
-      .containerBot h2 {
-        font-size: 5rem;
+      .containerTop,
+      .containerBot {
+        h2 {
+          line-height: 5rem;
+          font-size: 5rem;
+        }
+
+        .type {
+          height: 5rem;
+          font-size: 3.3rem;
+        }
       }
     }
 
     @media (min-width: 2200px) {
-      .containerTop h2,
-      .containerBot h2 {
-        font-size: 5.75rem;
+      .containerTop,
+      .containerBot {
+        h2 {
+          line-height: 5.75rem;
+          font-size: 5.75rem;
+        }
+
+        .type {
+          height: 5.75rem;
+          font-size: 3.8rem;
+        }
       }
     }
 
     @media (min-width: 2560px) {
-      .containerTop h2,
-      .containerBot h2 {
-        font-size: 6.5rem;
+      .containerTop,
+      .containerBot {
+        h2 {
+          line-height: 6.5rem;
+          font-size: 6.5rem;
+        }
+
+        .type {
+          height: 6.5rem;
+          font-size: 4.3rem;
+        }
       }
     }
   }

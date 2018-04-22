@@ -5,6 +5,11 @@
   h2 {
     color: #ffffff;
   }
+
+  .type {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
 }
 </style>
 
@@ -12,5 +17,8 @@
 <template>
   <div class="containerTop">
     <h2>Input</h2>
+    <select class="type">
+      <option>Mocked</option>
+    </select>
   </div>
 </template>
