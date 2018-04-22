@@ -17,9 +17,6 @@
 <template>
   <div class="containerTop">
     <h2>Input</h2>
-    <select class="type">
-      <option>Mocked</option>
-    </select>
     <div class="content">
     </div>
   </div>

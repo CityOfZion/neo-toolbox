@@ -16,7 +16,10 @@
   <div class="containerBot">
     <h2>Output</h2>
     <select class="type">
-      <option>Mocked</option>
+      <option>Reverse Hex</option>
+      <option>Account</option>
+      <option>Fixed8</option>
+      <option>Fixed8 > Num</option>
     </select>
     <div class="content">
     </div>
