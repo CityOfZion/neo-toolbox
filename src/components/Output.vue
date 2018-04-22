@@ -8,6 +8,11 @@
     background-color: rgba(139, 195, 74, 0.1);
     color: #8bc34a;
   }
+
+  .content::selection {
+    color: #ffffff;
+    background: rgba(139, 195, 74, 1);
+  }
 }
 </style>
 

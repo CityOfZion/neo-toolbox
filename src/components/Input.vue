@@ -1,3 +1,17 @@
+<script>
+import debounce from "debounce";
+
+const performAction = e => {
+  console.log(e.target.value);
+}
+
+export default {
+  methods: {
+    debounceInput: debounce(performAction, 250)
+  }
+};
+</script>
+
 <style lang="scss">
 .containerTop {
   background: linear-gradient(to bottom left, #8bc34a, #a9e168);
@@ -39,7 +53,7 @@
   <div class="containerTop">
     <h2>Input</h2>
     <div class="content">
-      <input type="text" class="input" placeholder="" autofocus />
+      <input @input="debounceInput" type="text" class="input" placeholder="" autofocus />
     </div>
   </div>
 </template>

@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@cityofzion/neon-js": "^3.5.0",
+    "debounce": "^1.1.0",
     "register-service-worker": "^1.0.0",
-    "vue": "^2.5.13"
+    "vue": "^2.5.13",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.6",
