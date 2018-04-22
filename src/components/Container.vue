@@ -52,7 +52,7 @@ export default {
         float: right;
 
         height: 3rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
 
         &:focus {
           outline: 0;
@@ -64,6 +64,7 @@ export default {
       .content {
         display: flex;
         align-items: center;
+        font-size: 1.5rem;
         padding-top: 8px;
         height: calc(100% - 3rem);
       }
@@ -79,11 +80,12 @@ export default {
 
         .type {
           height: 3.5rem;
-          font-size: 2.3rem;
+          font-size: 1.75rem;
         }
 
         .content {
           height: calc(100% - 3.5rem);
+          font-size: 1.75rem;
         }
       }
     }
@@ -98,11 +100,12 @@ export default {
 
         .type {
           height: 4rem;
-          font-size: 2.6rem;
+          font-size: 2rem;
         }
 
         .content {
           height: calc(100% - 4rem);
+          font-size: 2rem;
         }
       }
     }
@@ -117,11 +120,12 @@ export default {
 
         .type {
           height: 5rem;
-          font-size: 3.3rem;
+          font-size: 2.5rem;
         }
 
         .content {
           height: calc(100% - 5rem);
+          font-size: 2.5rem;
         }
       }
     }
@@ -136,11 +140,12 @@ export default {
 
         .type {
           height: 5.75rem;
-          font-size: 3.8rem;
+          font-size: 2.88rem;
         }
 
         .content {
           height: calc(100% - 5.75rem);
+          font-size: 2.88rem;
         }
       }
     }
@@ -155,11 +160,12 @@ export default {
 
         .type {
           height: 6.5rem;
-          font-size: 4.3rem;
+          font-size: 3.25rem;
         }
 
         .content {
           height: calc(100% - 6.5rem);
+          font-size: 3.25rem;
         }
       }
     }

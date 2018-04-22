@@ -22,6 +22,7 @@
       <option>Fixed8 > Num</option>
     </select>
     <div class="content">
+      Output
     </div>
   </div>
 </template>
