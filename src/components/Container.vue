@@ -43,7 +43,6 @@ export default {
         font-size: 3rem;
         font-weight: lighter;
         display: inline;
-        padding-left: 8px;
       }
 
       .type {
@@ -61,6 +60,13 @@ export default {
           box-shadow: none;
         }
       }
+
+      .content {
+        display: flex;
+        align-items: center;
+        padding-top: 8px;
+        height: calc(100% - 3rem);
+      }
     }
 
     @media (min-width: 1201px) {
@@ -74,6 +80,10 @@ export default {
         .type {
           height: 3.5rem;
           font-size: 2.3rem;
+        }
+
+        .content {
+          height: calc(100% - 3.5rem);
         }
       }
     }
@@ -90,6 +100,10 @@ export default {
           height: 4rem;
           font-size: 2.6rem;
         }
+
+        .content {
+          height: calc(100% - 4rem);
+        }
       }
     }
 
@@ -104,6 +118,10 @@ export default {
         .type {
           height: 5rem;
           font-size: 3.3rem;
+        }
+
+        .content {
+          height: calc(100% - 5rem);
         }
       }
     }
@@ -120,6 +138,10 @@ export default {
           height: 5.75rem;
           font-size: 3.8rem;
         }
+
+        .content {
+          height: calc(100% - 5.75rem);
+        }
       }
     }
 
@@ -134,6 +156,10 @@ export default {
         .type {
           height: 6.5rem;
           font-size: 4.3rem;
+        }
+
+        .content {
+          height: calc(100% - 6.5rem);
         }
       }
     }

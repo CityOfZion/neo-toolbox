@@ -18,5 +18,7 @@
     <select class="type">
       <option>Mocked</option>
     </select>
+    <div class="content">
+    </div>
   </div>
 </template>
