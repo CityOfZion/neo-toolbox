@@ -5,8 +5,9 @@ import "./registerServiceWorker";
 
 Vue.config.productionTip = false;
 
-import "./store";
+import store from "./store";
 
 new Vue({
-  render: h => h(App)
+  render: h => h(App),
+  store
 }).$mount("#app");

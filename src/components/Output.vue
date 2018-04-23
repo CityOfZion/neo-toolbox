@@ -1,3 +1,16 @@
+<script>
+import { mapGetters } from "vuex";
+
+export default {
+  computed: {
+    ...mapGetters("output", {
+      selectedType: "getCurrentType",
+      types: "getTypes"
+    })
+  }
+}
+</script>
+
 <style lang="scss">
 .containerBot {
   h2 {
@@ -20,14 +33,11 @@
 <template>
   <div class="containerBot">
     <h2>Output</h2>
-    <select class="type">
-      <option>Reverse Hex</option>
-      <option>Account</option>
-      <option>Fixed8</option>
-      <option>Fixed8 > Num</option>
+    <select class="type" v-model="selectedType">
+      <option v-for="t in types" v-bind:value="t.value">{{ t.text }}</option>
     </select>
     <div class="content">
-      Output
+      Output?
     </div>
   </div>
 </template>
