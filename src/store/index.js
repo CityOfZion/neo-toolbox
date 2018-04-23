@@ -31,6 +31,11 @@ export default new Vuex.Store({
         getTypes(state) {
           return state.types;
         }
+      },
+      mutations: {
+        setCurrentType(state, x) {
+          state.type = x;
+        }
       }
     }
   }

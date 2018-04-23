@@ -3,7 +3,7 @@ import debounce from "debounce";
 
 const performAction = e => {
   console.log(e.target.value);
-}
+};
 
 export default {
   methods: {
