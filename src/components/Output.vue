@@ -1,30 +1,32 @@
 <script>
-import { mapGetters, mapMutations } from "vuex";
+import { mapActions, mapGetters, mapMutations } from "vuex";
 
 const getters = {
-  ...mapGetters("output", {
-    types: "getTypes",
-    selectedType: "getCurrentType"
+  ...mapGetters({
+    selectedType: "getCurrentOutputType",
+    types: "getOutputTypes",
+    value: "getOutputValue"
   })
 };
 
 const mutations = {
-  ...mapMutations("output", {
-    selectedType: "setCurrentType"
+  ...mapMutations({
+    selectedType: "setCurrentOutputType"
   })
 };
 
 export default {
   computed: {
-    types: getters.types,
     selectedType: {
       get: getters.selectedType,
       set: mutations.selectedType
-    }
+    },
+    types: getters.types,
+    value: getters.value
   },
-  actions: {
-    ...mapMutations("output", {
-      setCurrentType: "setCurrentType"
+  methods: {
+    ...mapActions({
+      onChangeSelect: "convert"
     })
   }
 };
@@ -41,6 +43,27 @@ export default {
     color: #8bc34a;
   }
 
+  .content {
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    p {
+      display: inline;
+
+      &.tag {
+        padding: 0 4px;
+        background-color: rgba(139, 195, 74, 0.1);
+        color: #8bc34a;
+      }
+    }
+
+    p + p {
+      margin-left: 4px;
+    }
+  }
+
   .content::selection {
     color: #ffffff;
     background: rgba(139, 195, 74, 1);
@@ -52,11 +75,9 @@ export default {
 <template>
   <div class="containerBot">
     <h2>Output</h2>
-    <select class="type" v-model="selectedType">
+    <select @change="onChangeSelect" class="type" v-model="selectedType">
       <option v-for="t in types" v-bind:value="t.value" v-bind:key="t.text">{{ t.text }}</option>
     </select>
-    <div class="content">
-      Output?
-    </div>
+    <div class="content" v-html="value" />
   </div>
 </template>

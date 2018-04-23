@@ -7419,6 +7419,10 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
+switch-tree@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/switch-tree/-/switch-tree-0.1.0.tgz#590f7b27e94404423797da6fbf489dc0f6d93baa"
+
 symbol-tree@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"

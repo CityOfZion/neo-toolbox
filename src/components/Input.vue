@@ -1,13 +1,36 @@
 <script>
 import debounce from "debounce";
 
-const performAction = e => {
-  console.log(e.target.value);
+import { mapActions, mapGetters, mapMutations } from "vuex";
+
+const getters = {
+  ...mapGetters({
+    value: "getInputValue"
+  })
+};
+
+const mutations = {
+  ...mapMutations({
+    value: "setInputValue"
+  })
+};
+
+const actions = {
+  ...mapActions({
+    convert: "convert",
+    value: "setInputAndConvert"
+  })
 };
 
 export default {
+  computed: {
+    value: {
+      get: getters.value,
+      set: mutations.value
+    }
+  },
   methods: {
-    debounceInput: debounce(performAction, 250)
+    debounceConvert: debounce(actions.convert, 250)
   }
 };
 </script>
@@ -23,6 +46,11 @@ export default {
   .type {
     background-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
   }
 
   .content .input {
@@ -53,7 +81,7 @@ export default {
   <div class="containerTop">
     <h2>Input</h2>
     <div class="content">
-      <input @input="debounceInput" type="text" class="input" placeholder="" autofocus />
+      <input @input="debounceConvert" v-model="value" type="text" class="input" placeholder="Your input goes here" autofocus />
     </div>
   </div>
 </template>

@@ -62,12 +62,15 @@ export default {
       }
 
       .content {
-        display: flex;
-        align-items: center;
         font-size: 1.5rem;
-        padding-top: 8px;
-        height: calc(100% - 3rem);
+        max-width: 100%;
+        margin-top: 8px;
+        height: calc(100% - 3rem - 8px);
       }
+    }
+
+    .containerBot .content {
+      align-items: flex-start;
     }
 
     @media (min-width: 1201px) {
@@ -84,7 +87,8 @@ export default {
         }
 
         .content {
-          height: calc(100% - 3.5rem);
+          margin-top: 10px;
+          height: calc(100% - 3.5rem - 10px);
           font-size: 1.75rem;
         }
       }
@@ -104,7 +108,8 @@ export default {
         }
 
         .content {
-          height: calc(100% - 4rem);
+          margin-top: 12px;
+          height: calc(100% - 4rem - 12px);
           font-size: 2rem;
         }
       }
@@ -124,7 +129,8 @@ export default {
         }
 
         .content {
-          height: calc(100% - 5rem);
+          margin-top: 14px;
+          height: calc(100% - 5rem - 14px);
           font-size: 2.5rem;
         }
       }
@@ -144,7 +150,8 @@ export default {
         }
 
         .content {
-          height: calc(100% - 5.75rem);
+          margin-top: 16px;
+          height: calc(100% - 5.75rem - 16px);
           font-size: 2.88rem;
         }
       }
@@ -164,7 +171,8 @@ export default {
         }
 
         .content {
-          height: calc(100% - 6.5rem);
+          margin-top: 18px;
+          height: calc(100% - 6.5rem - 18px);
           font-size: 3.25rem;
         }
       }
