@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js");
 
 importScripts(
-  "/neo-toolbox/precache-manifest.587a021ebfd4c2c73613231d02cf4d62.js"
+  "/neo-toolbox/precache-manifest.89c3fef04068b94c323b426a7710cc16.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "neo-toolbox"});
