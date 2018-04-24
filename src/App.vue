@@ -1,28 +1,45 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
-
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Container from "./components/Container.vue";
 
 export default {
-  name: "app",
+  name: "neo-toolbox",
   components: {
-    HelloWorld
+    Container
   }
 };
 </script>
 
-<style>
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(
+    to bottom right,
+    transparent,
+    rgba(190, 190, 190, 0.05)
+  );
+}
+
+div {
+  box-sizing: border-box;
+}
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
+
+<template>
+  <div id="app">
+    <Container />
+  </div>
+</template>
