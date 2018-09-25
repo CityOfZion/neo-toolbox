@@ -1588,6 +1588,10 @@ bser@^2.0.0:
   dependencies:
     node-int64 "^0.4.0"
 
+bsqsq@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/bsqsq/-/bsqsq-1.0.1.tgz#66d3aaa4eb3681668493437cd59825fff00ab2b4"
+
 buffer-indexof@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/buffer-indexof/-/buffer-indexof-1.1.1.tgz#52fabcc6a606d1a00302802648ef68f639da268c"
