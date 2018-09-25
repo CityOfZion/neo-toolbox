@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/CityOfZion/neo-toolbox/master/example.png" />
+  <img src="https://raw.githubusercontent.com/CityOfZion/neo-toolbox/master/example.png" width="450px" />
 </p>
 
 ## Overview
