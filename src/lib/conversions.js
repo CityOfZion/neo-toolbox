@@ -28,6 +28,21 @@ export const reverseHex = input => {
   return u.reverseHex(input);
 };
 
+export const i2h = input => {
+  try {
+    const integer = parseInt(input, 10);
+    if (isNaN(integer)) return "Invalid Input! Expected a number!";
+    return `0x${u.int2hex(integer)}`;
+  } catch (e) {
+    return "Invalid Input! Expected a number!";
+  }
+};
+
+export const s2h = input => {
+  if (input === "") return "";
+  return `0x${u.str2hexstring(input)}`;
+};
+
 export const int2fixed8 = input => {
   try {
     return new u.Fixed8(input).toHex();
