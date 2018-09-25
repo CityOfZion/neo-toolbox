@@ -53,6 +53,8 @@ export default new Vuex.Store({
           value ${"Account"} ${conversions.account}
           value ${"Fixed8"} ${conversions.int2fixed8}
           value ${"Fixed8 -> Num"} ${conversions.fixed82int}
+          value ${"String -> Hex"} ${conversions.s2h}
+          value ${"Int -> Hex"} ${conversions.i2h}
       `;
 
       commit("setOutputValue", execute(state.inputValue));
