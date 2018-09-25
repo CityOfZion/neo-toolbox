@@ -3,6 +3,7 @@ import Vuex from "vuex";
 import tree from "switch-tree";
 
 import * as conversions from "./../lib/conversions";
+import conversionOrder from "./../lib/conversionOrder";
 
 Vue.use(Vuex);
 
@@ -10,14 +11,9 @@ export default new Vuex.Store({
   state: {
     inputValue: "",
     inputType: "",
-    outputValue: "",
-    outputType: "0",
-    outputTypes: [
-      { text: "Reverse Hex", value: "0" },
-      { text: "Account", value: "1" },
-      { text: "Fixed8", value: "2" },
-      { text: "Fixed8 > Num", value: "3" }
-    ]
+    outputValue: conversions.account(),
+    outputType: 0,
+    outputTypes: conversionOrder
   },
   getters: {
     getInputValue(state) {
@@ -49,14 +45,16 @@ export default new Vuex.Store({
   },
   actions: {
     convert({ commit, state }) {
-      const outputType = parseInt(state.outputType, 10);
+      const outputType = conversionOrder[parseInt(state.outputType, 10)];
 
       const execute = tree`
         lazy ${outputType}
-          value ${0} ${conversions.reverseHex}
-          value ${1} ${conversions.account}
-          value ${2} ${conversions.int2fixed8}
-          value ${3} ${conversions.fixed82int}
+          value ${"Reverse Hex"} ${conversions.reverseHex}
+          value ${"Account"} ${conversions.account}
+          value ${"Fixed8"} ${conversions.int2fixed8}
+          value ${"Fixed8 -> Num"} ${conversions.fixed82int}
+          value ${"String -> Hex"} ${conversions.s2h}
+          value ${"Int -> Hex"} ${conversions.i2h}
       `;
 
       commit("setOutputValue", execute(state.inputValue));

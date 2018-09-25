@@ -1,14 +1,22 @@
 import { u, wallet } from "@cityofzion/neon-js";
+import bsqsq from "bsqsq";
+
+import convertToCSharp from "./../lib/converToCSharp";
 
 export const account = input => {
   let output = "";
   try {
     const acct = new wallet.Account(input);
+    const python = bsqsq(acct.scriptHash, true);
+    const cSharp = convertToCSharp(acct.scriptHash);
+
     output += `<p class="tag">Address</p><p>${acct.address}</p><br />`;
     output += `<p class="tag">Scripthash</p><p>${acct.scriptHash}</p><br />`;
+    output += `<p class="tag">Python Account</p><p>${python}</p><br />`;
+    output += `<p class="tag">C# Account</p><p>${cSharp}</p><br />`;
     output += `<p class="tag">Public Key</p><p>${acct.publicKey}</p><br />`;
-    output += `<p class="tag">Private Key</p><p>${acct.privateKey}</p><br />`;
     output += `<p class="tag">WIF</p><p>${acct.WIF}</p><br />`;
+    output += `<p class="tag">Private Key</p><p>${acct.privateKey}</p><br />`;
     return output;
   } catch (err) {
     return output !== "" ? output : "Invalid Input!";
@@ -18,6 +26,21 @@ export const account = input => {
 export const reverseHex = input => {
   if (!u.isHex(input)) return "Invalid Input! Expected a hexstring!";
   return u.reverseHex(input);
+};
+
+export const i2h = input => {
+  try {
+    const integer = parseInt(input, 10);
+    if (isNaN(integer)) return "Invalid Input! Expected a number!";
+    return `0x${u.int2hex(integer)}`;
+  } catch (e) {
+    return "Invalid Input! Expected a number!";
+  }
+};
+
+export const s2h = input => {
+  if (input === "") return "";
+  return `0x${u.str2hexstring(input)}`;
 };
 
 export const int2fixed8 = input => {

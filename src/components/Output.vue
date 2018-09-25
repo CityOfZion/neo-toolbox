@@ -56,6 +56,10 @@ export default {
         padding: 0 4px;
         background-color: rgba(139, 195, 74, 0.1);
         color: #8bc34a;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
     }
 
@@ -76,7 +80,7 @@ export default {
   <div class="containerBot">
     <h2>Output</h2>
     <select @change="onChangeSelect" class="type" v-model="selectedType">
-      <option v-for="t in types" v-bind:value="t.value" v-bind:key="t.text">{{ t.text }}</option>
+      <option v-for="(t, index) in types" v-bind:value="index" v-bind:key="t">{{ t }}</option>
     </select>
     <div class="content" v-html="value" />
   </div>
